@@ -1,0 +1,74 @@
+<div class="container">  <div class=" text-center mt-5 ">
+    <h1 style="font-weight: 700;text-shadow: 1px 1px 1px #000000;">Add Product</h1>
+</div>
+<div class="row ">
+    <div class="col-lg-7 mx-auto">
+        <div class="card mt-2 mx-auto p-4 bg-light">
+            <div class="card-body bg-light">
+                <div class="container">
+                    <form  #productForm="ngForm" id="contact-form" role="form" >
+                        <div class="controls">
+                            <h3 style="font-weight:500;margin-left: 210px;text-shadow: 1px 1px 1px #000000;">Seller Details</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productsService.selectedProducts._id" >
+                                    <div class="form-group"> <label for="form_name">Firstname *</label> <input id="form_name" type="text" name="firstname" #name="ngModel"  [(ngModel)]="productsService.selectedProducts.firstname" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"> <label for="form_lastname">Lastname *</label> <input id="form_lastname" type="text" name="lastname" #name="ngModel" class="form-control"  [(ngModel)]="productsService.selectedProducts.lastname" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."> </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group"> <label for="form_phone">Phone No*</label> <input id="form_phone" type="text" name="phoneno" #name="ngModel" [(ngModel)]="productsService.selectedProducts.phoneno" class="form-control" placeholder="Please enter your phone number *" required="required" data-error="Firstname is required."> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" type="email" name="email" #name="ngModel" [(ngModel)]="productsService.selectedProducts.email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required."> </div>
+                                </div>
+                                
+                            </div>
+<br>
+                            <h3 style="font-weight: 500;margin-left: 200px;text-shadow: 1px 1px 1px #000000;">Product Details</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group"> <label for="form_phone">Product Title*</label> <input id="form_phone" type="text" name="title" #name="ngModel" [(ngModel)]="productsService.selectedProducts.title" class="form-control" placeholder="Please enter your phone number *" required="required" data-error="Firstname is required."> </div>
+                                </div>
+                               
+                                
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group"> <label for="form_need">Category *</label> <select id="form_need" #name="ngModel" name="category" class="form-control" required="required" [(ngModel)]="productsService.selectedProducts.category" data-error="Please specify your need.">
+                                            <option value="" selected disabled>--Select category--</option>
+                                            <option value="electronics">electronics</option>
+                                            <option value="fashion">Fashion</option>
+                                            <option value="jewelery">Jewllery</option>
+                                            
+                                        </select> </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"> <label for="form_price">Price *</label> <input id="form_price" #name="ngModel" type="number" name="price" class="form-control" [(ngModel)]="productsService.selectedProducts.price"  placeholder="Please enter product price*" required="required" data-error="Valid email is required."> </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group"> <label for="form_description">Product Description *</label> <textarea id="form_description"  #name="ngModel" name="description" [(ngModel)]="productsService.selectedProducts.description" class="form-control" placeholder="Write product description" rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                               <!-- <div class="form-group"> <label for="form_image">Product Images *</label> <input id="form_image" type="image" name="image" #image="ngModel" class="form-control" placeholder="Enter Product Image*" required="required" data-error="Valid email is required."> </div>
+                            --></div>
+   <br>
+                            <div class="col-md-12"> <button type="button"  (click)="onSubmit(productForm)" RouterLink='/products' class="btn btn-success">Add Product</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- /.8 -->
+    </div> <!-- /.row-->
+</div>
+</div>
